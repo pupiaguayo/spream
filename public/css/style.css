@@ -1,0 +1,205 @@
+body{
+    background-color: rgb(8, 8, 8);
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body .logo{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: red;
+    letter-spacing: 6px;
+    font-size: 2.5rem;
+}
+header nav a{
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(143, 143, 143);
+    margin-right: 15px;
+}
+header nav a:hover,
+header nav a.activo{
+    color: white;
+
+}
+
+
+/*IMAGEN PELICULA PRINCIPAL*/
+.pelicula-principal{
+    font-size: 16px;
+    min-height: 40.625em;
+    color: white;
+    box-shadow: 0 0 20px 0 rgb(175, 175, 175);
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url('../img/Joker.jpg');
+    background-position: start;
+    background-size: cover;
+    margin: 3.12em;
+    display: flex;
+    align-items: flex-end;
+}
+.pelicula-principal .contenedor{
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+.pelicula-principal .titulo{
+    font-weight: 600;
+    font-size: 3.125em;
+    margin-bottom: 0.4em;
+}
+.pelicula-principal .descripcion{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+.pelicula-principal .boton{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+.pelicula-principal .boton:hover {
+    background: #fff;
+    color: black;
+
+}
+.pelicula-principal .boton i{
+    margin-right: 1.25em;
+}
+/*Titulo de contenedor y controles*/
+.titulo-controles{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.titulo-controles h3{
+    color: #fff;
+    font-size: 30px;
+}
+.titulo-controles .indicadores button{
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+
+}
+.titulo-controles .indicadores button:hover,
+.titulo-controles .indicadores button.activo
+{
+background: red;
+}
+/*Imagenes principales y flechas*/
+.peliculas-recomendadas{
+    margin-bottom: 70px;
+}
+.peliculas-recomendadas .contenedor-princ .pelicula img{
+    width: 600px;
+}
+.peliculas-recomendadas .contenedor-princ{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.peliculas-recomendadas .contenedor-princ .flecha-izquierda,
+.peliculas-recomendadas .contenedor-princ .flecha-derecha{
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 5000;
+}
+.peliculas-recomendadas .contenedor-princ .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-princ .flecha-derecha:hover{
+    background: rgb(0, 0, 0, 0.9);
+}
+.peliculas-recomendadas .contenedor-princ .flecha-derecha{
+    right: 0;
+}
+.peliculas-recomendadas .contenedor-princ .flecha-izquierda{
+    left: 0;
+}
+
+/*Carousel img*/
+.peliculas-recomendadas .contenedor-imagenes{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.peliculas-recomendadas .contenedor-imagenes .carousel{
+    display: flex;
+}
+.peliculas-recomendadas .contenedor-imagenes .carousel .pelicula{
+    min-width: 20%;
+    transition: .3s ease all;
+}
+.peliculas-recomendadas .contenedor-imagenes .carousel .pelicula img{
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 900px){
+    header .logo{
+        margin-bottom: 10px;
+    }
+    header .contenedor{
+        flex-direction: column;
+        text-align: center;
+    }
+    .pelicula-principal{
+        font-size: 14px
+    }
+    .pelicula-principal .descripcion{
+        max-width: 100%;
+    }
+    .titulo-controles h3{
+        color: #fff;
+        font-size: 20px;
+    }
+    .peliculas-recomendadas .contenedor-imagenes .carousel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .peliculas-recomendadas .indicadores,
+    .peliculas-recomendadas .flecha-derecha,
+    .peliculas-recomendadas .flecha-izquierda{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .pelicula-principal{
+        font-size: 8px
+    }
+    header nav a{
+        font-size: 10px;
+        margin-right: 10px;
+    }
+    .titulo-controles h3{
+        color: #fff;
+        font-size: 10px;
+    }
+}
