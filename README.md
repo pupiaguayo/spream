@@ -1,1 +1,1 @@
-Spream simula una pagina de inicio de una web que permite ver series, peliculas y programas. Ideada de forma similar a Netflix, es posible de visualizar en cualquier dispositivo por su diseño responsive. Su acceso se encuentra dispoible a traves del siguiente link https://spream2.web.app/
+Spream simula una pagina de inicio de una web que permite ver series, peliculas y programas. Ideada de forma similar a Netflix, es posible de visualizar en cualquier dispositivo por su diseño responsive. Su acceso se encuentra disponible a traves del siguiente link https://spream2.web.app/
